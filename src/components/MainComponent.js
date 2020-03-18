@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Story from './Story.js';
+import Summary from './Summary.js';
 import generateId from './../utils/idGenerator.js';
 import './../App.css';
 
@@ -14,24 +15,7 @@ class MainComponent extends Component {
     this.handleNewTask = this.handleNewTask.bind(this);
 
     this.state = {
-      stories: [
-        {
-          id: 1,
-          name: 'Story 1',
-          tasks: [
-            {id: 1, name: 'Task 1', optimistic: 2, pessimistic: 5, realistic: 3},
-            {id: 2, name: 'Task 2', optimistic: 10, pessimistic: 20, realistic: 15}
-          ]
-        },
-        {
-          id: 2,
-          name: 'Story 2',
-          tasks: [
-            {id: 3, name: 'Task 3', optimistic: 1, pessimistic: 5, realistic: 2},
-            {id: 4, name: 'Task 4', optimistic: 5, pessimistic: 10, realistic: 6}
-          ]
-        }
-      ]
+      stories: []
     }
   }
 
@@ -110,6 +94,7 @@ class MainComponent extends Component {
         <div>
           <button type="submit" onClick={this.handleNewStory}>Add new story</button>
         </div>
+        <Summary {...this.state} />
       </div>
     );
   }

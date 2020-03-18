@@ -9,6 +9,7 @@ class Story extends Component {
         <h2>
           <input type="text"
                  defaultValue={this.props.name}
+                 placeholder="Story name"
                  onChange={e => this.props.handleStoryNameChange(this.props.id, e.target.value)}
           />
         </h2>
