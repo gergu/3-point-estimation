@@ -18,10 +18,10 @@ class Story extends Component {
         <ul>
           {this.props.tasks.length > 0 &&
             <li>
-              <div class="task-input">Task name:</div>
-              <div class="estimation-input">Optimistic:</div>
-              <div class="estimation-input">Pessimistic:</div>
-              <div class="estimation-input">Realistic:</div>
+              <div className="task-input">Task name:</div>
+              <div className="estimation-input">Optimistic:</div>
+              <div className="estimation-input">Pessimistic:</div>
+              <div className="estimation-input">Realistic:</div>
             </li>
           }
           {this.props.tasks.map((task) =>

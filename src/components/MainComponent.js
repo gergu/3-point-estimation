@@ -46,7 +46,7 @@ class MainComponent extends Component {
     let storyIndex = newState.stories.findIndex((story) => story.id === storyId);
     let taskIndex = newState.stories[storyIndex].tasks.findIndex((task) => task.id === taskId);
 
-    newState.stories[storyIndex].tasks[taskIndex][type] = parseInt(value, 10);
+    newState.stories[storyIndex].tasks[taskIndex][type] = parseFloat(value, 10);
 
     this.setState(newState);
   }

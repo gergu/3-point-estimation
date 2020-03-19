@@ -16,19 +16,19 @@ class Task extends Component {
                placeholder="optimistic"
                className="estimation-input"
                title="Optimistic"
-               defaultValue={this.props.optimistic} onChange={e => this.props.handleEstimationChange(this.props.id, e.target.value, this.props.storyId, 'optimistic')}
+               defaultValue={this.props.optimistic.toString()} onChange={e => this.props.handleEstimationChange(this.props.id, e.target.value, this.props.storyId, 'optimistic')}
         />
         <input type="number"
                min="0"
                placeholder="pessimistic"
                className="estimation-input"
-               defaultValue={this.props.pessimistic} onChange={e => this.props.handleEstimationChange(this.props.id, e.target.value, this.props.storyId, 'pessimistic')}
+               defaultValue={this.props.pessimistic.toString()} onChange={e => this.props.handleEstimationChange(this.props.id, e.target.value, this.props.storyId, 'pessimistic')}
         />
         <input type="number"
                min="0"
                placeholder="realistic"
                className="estimation-input"
-               defaultValue={this.props.realistic} onChange={e => this.props.handleEstimationChange(this.props.id, e.target.value, this.props.storyId, 'realistic')}
+               defaultValue={this.props.realistic.toString()} onChange={e => this.props.handleEstimationChange(this.props.id, e.target.value, this.props.storyId, 'realistic')}
         />
       </li>
     );
