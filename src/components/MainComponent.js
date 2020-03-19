@@ -92,7 +92,7 @@ class MainComponent extends Component {
           />
         )}
         <div>
-          <button type="submit" onClick={this.handleNewStory}>Add new story</button>
+          <button type="submit" className="btn ml-5 mt-5" onClick={this.handleNewStory}>Add new story</button>
         </div>
         <Summary {...this.state} />
       </div>

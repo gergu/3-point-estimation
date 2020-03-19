@@ -6,14 +6,24 @@ class Story extends Component {
   render() {
     return (
       <div className="story">
-        <h2>
+        <h3>
+          Story name:
           <input type="text"
                  defaultValue={this.props.name}
                  placeholder="Story name"
+                 className="story-input"
                  onChange={e => this.props.handleStoryNameChange(this.props.id, e.target.value)}
           />
-        </h2>
+        </h3>
         <ul>
+          {this.props.tasks.length > 0 &&
+            <li>
+              <div class="task-input">Task name:</div>
+              <div class="estimation-input">Optimistic:</div>
+              <div class="estimation-input">Pessimistic:</div>
+              <div class="estimation-input">Realistic:</div>
+            </li>
+          }
           {this.props.tasks.map((task) =>
             <Task key={task.id}
                   storyId={this.props.id}
@@ -24,7 +34,7 @@ class Story extends Component {
           )}
         </ul>
         <div>
-          <button onClick={e => this.props.handleNewTask(this.props.id)}>Add new task</button>
+          <button className="btn" onClick={e => this.props.handleNewTask(this.props.id)}>Add new task</button>
         </div>
       </div>
     );
