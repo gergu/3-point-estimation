@@ -38,7 +38,7 @@ class Summary extends Component {
 
   render() {
     return (
-      <div className="story">
+      <div className="jumbotron jumbotron-fluid">
         <h3>Estimation summary:</h3>
         <p>E(Project): {this.eTotal().toFixed(2)}</p>
         <p>SE(Project): {this.seTotal().toFixed(2)}</p>

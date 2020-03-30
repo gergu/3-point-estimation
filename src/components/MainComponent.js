@@ -81,18 +81,20 @@ class MainComponent extends Component {
 
   render() {
     return (
-      <div className="App-intro">
-        {this.state.stories.map((story) =>
-          <Story key={story.id}
-                 handleStoryNameChange={this.handleStoryNameChange}
-                 handleTaskNameChange={this.handleTaskNameChange}
-                 handleEstimationChange={this.handleEstimationChange}
-                 handleNewTask={this.handleNewTask}
-                 {...story}
-          />
-        )}
-        <div>
-          <button type="submit" className="btn ml-5 mt-5" onClick={this.handleNewStory}>Add new story</button>
+      <div>
+        <div className="container mt-3 mb-3">
+          {this.state.stories.map((story) =>
+            <Story key={story.id}
+                   handleStoryNameChange={this.handleStoryNameChange}
+                   handleTaskNameChange={this.handleTaskNameChange}
+                   handleEstimationChange={this.handleEstimationChange}
+                   handleNewTask={this.handleNewTask}
+                   {...story}
+            />
+          )}
+          <div>
+            <button type="submit" className="btn btn-primary" onClick={this.handleNewStory}>Add new story</button>
+          </div>
         </div>
         <Summary {...this.state} />
       </div>
